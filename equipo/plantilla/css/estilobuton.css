@@ -1,0 +1,18 @@
+
+.portada{
+    height: 900px;
+    width: 100%;
+}
+
+.img1{
+ position: relative;
+ top: 500px;
+ left: 43%;
+}
+
+.img2{
+    position: relative;
+    top: -400px;
+    left: 40%;  
+}
+

@@ -1,0 +1,23 @@
+
+.portada{
+    height: 900px;
+    width: 100%;
+}
+
+.img1{
+ position: relative;
+ top: 500px;
+ left: 43%;
+}
+
+.img2{
+    position: relative;
+    top: -400px;
+    left: 40%;  
+}
+.nav-back{
+    display: block;
+    background-color: rgb(201, 141, 30);
+    border-radius: 5px;;
+}
+
