@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/datatables.css"/>
+    <title>Buscaminas</title>
+    <style>
+        .botones{
+            width: 100%;
+            height: 50px;
+            border: 1px solid black;
+            background-color: #11035fa4;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+    <table border="1" style="margin-top: 10%; width: 30%;">
+        <tr>
+            <td>
+                <button class="verificar botones" valor="1" >O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="verificar botones" valor="1" >O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="verificar botones" valor="1" >O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="verificar botones" valor="1" >O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="verificar botones" valor="1" >O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="1">O</button>
+            </td>
+            <td>
+                <button class="verificar botones" valor="20">O</button>
+            </td>
+        </tr>        
+    </table>
+    </center>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="assets/datatables.js"></script>
+<script>
+
+    $( document ).ready(function() {
+        cargarValores();
+        $('#example').DataTable();
+    });
+
+    var total = 0;
+    $(".botones").click(function()
+    {   
+        var valor = $(this).attr("valor");        
+        if(valor == 1){
+            $(this).css("background-color", "white");            
+            total++;
+         }else{
+             $(this).css("background-color", "red");
+             alert("Perdiste, Puntos: "+total);    
+             location.reload();
+         }        
+    });
+
+    function valorAleatorio(min = 0, max = 1){
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function cargarValores(){        
+        $(".verificar").each(function(){
+            $(this).attr("valor",valorAleatorio);            
+        });
+    }
+</script>
+</html>
