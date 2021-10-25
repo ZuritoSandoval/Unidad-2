@@ -1,0 +1,31 @@
+.container{
+    display:block;
+    background-color: aliceblue;
+    align-items: center;
+    padding: 25px;
+    margin-top: 1%;
+    border-radius: 20px;
+    
+    
+    /*margin: auto;
+    margin-left: 30%;
+    margin-block: 2%;
+    background-color: antiquewhite;
+    margin-top: 1%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1% 15%;*/
+    
+}
+.table{
+    position: relative;
+    left: 4%;
+    margin-top: 1%;
+    background-color: aliceblue;
+    margin: 20px;
+    width: 1200px;
+    border-radius: 10px;
+}
+.form{
+    height: 100%;
+}
